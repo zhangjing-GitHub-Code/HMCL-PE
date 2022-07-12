@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
     <string name="app_name" translatable="false">HMCL-PE</string>
     <string name="app_full_name" translatable="false">Hello Minecraft! Launcher : Pocket Edition</string>
     <string name="app_name_pri" translatable="false">Hello Minecraft! Launcher</string>
@@ -1093,7 +1093,6 @@
     <string name="drawer_custom_menu_view">添加控件</string>
     <string name="drawer_custom_menu_add_view">添加</string>
     <string name="drawer_custom_menu_warn">你需要先创建或选择一个子布局</string>
-
     <string name="ui_about_about">关于</string>
     <string name="ui_about_hmclpe_main" translatable="false">Hello Minecraft! Launcher : Pocket Edition</string>
     <string name="ui_about_hmclpe_sub" translatable="false">1.0.0</string>
