@@ -23,6 +23,7 @@
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_cancel_black.xml" value="0.185" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_clock_black.xml" value="0.1855" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_close_black.xml" value="0.128" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_copy_black.xml" value="0.1235" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_create_black.xml" value="0.1875" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_delete_black.xml" value="0.185" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_delete_white.xml" value="0.185" />
@@ -31,6 +32,7 @@
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_exterior_black.xml" value="0.1915" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_folder_black.xml" value="0.128" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_horizontal_black.xml" value="0.1855" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_join_black.xml" value="0.1855" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_keyboard_arrow_up_black.xml" value="0.195" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_keyboard_blue.xml" value="0.195" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/ic_baseline_launch_black.xml" value="0.1875" />
@@ -62,6 +64,7 @@
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/launcher_button_normal.xml" value="0.122" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/launcher_button_parent.xml" value="0.192" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/launcher_button_selected.xml" value="0.122" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/launcher_button_transparent_blue.xml" value="0.126" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/launcher_button_white.xml" value="0.192" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/launcher_button_white_blue.xml" value="0.192" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/drawable/launcher_setting_button.xml" value="0.1235" />
@@ -98,6 +101,7 @@
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_copy_version.xml" value="0.264" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_create_button_style.xml" value="0.2223731884057971" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_create_child.xml" value="0.2223731884057971" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_create_community.xml" value="0.25" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_create_control_pattern.xml" value="0.2223731884057971" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_create_rocker_style.xml" value="0.22282608695652173" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_download.xml" value="0.264" />
@@ -109,12 +113,15 @@
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_edit_world_name.xml" value="0.2" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_export_control.xml" value="0.11354166666666667" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_game_menu.xml" value="0.2223731884057971" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_hin2n_community.xml" value="0.264" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_hin2n_menu.xml" value="0.264" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_import_control.xml" value="0.2033514492753623" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_input.xml" value="0.2" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_install_assets.xml" value="0.264" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_install_game.xml" value="0.264" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_install_local.xml" value="0.264" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_install_update.xml" value="0.2" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_join_community.xml" value="0.264" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_jre_manager.xml" value="0.13858695652173914" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_launch_check.xml" value="0.264" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/dialog_loading.xml" value="0.1578125" />
@@ -171,6 +178,9 @@
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_download_resource.xml" value="0.2" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_download_resource_pack.xml" value="0.1125" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_download_world.xml" value="0.1125" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_export_package_file.xml" value="0.11614583333333334" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_export_package_info.xml" value="0.13722826086956522" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_export_package_type.xml" value="0.13722826086956522" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_export_world.xml" value="0.264" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_forge_version_list.xml" value="0.2151268115942029" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_game_manager.xml" value="0.11666666666666667" />
@@ -186,14 +196,16 @@
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_install_liteloader_list.xml" value="0.2151268115942029" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_install_optifine_list.xml" value="0.2151268115942029" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_install_package.xml" value="0.13722826086956522" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_install_package_file.xml" value="0.13722826086956522" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_main.xml" value="0.2151268115942029" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_manage_datapack.xml" value="0.13722826086956522" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_mod_update.xml" value="0.2" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_multi_player.xml" value="0.25" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_setting.xml" value="0.1109375" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_setting_about.xml" value="0.11354166666666667" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_setting_download.xml" value="0.13858695652173914" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_setting_exterior.xml" value="0.11666666666666667" />
-        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_setting_global_game.xml" value="0.20889748549323017" />
+        <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_setting_global_game.xml" value="0.1968225948808473" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_setting_universal.xml" value="0.1125" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/ui_version_list.xml" value="0.2151268115942029" />
         <entry key="..\:/Projects/Android/HMCL-PE/HMCLPE/src/main/res/layout/view_group_keyboard.xml" value="0.22282608695652173" />

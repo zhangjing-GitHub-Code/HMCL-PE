@@ -1,7 +1,6 @@
 package com.tungsten.hmclpe.utils.file;
 
 import android.content.Context;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
@@ -68,7 +67,7 @@ public class AssetsUtils {
         currentPosition = 0;
         try {
             totalSize = getTotalSize(context,srcPath);
-            Log.e("assetsFileSize",Integer.toString(totalSize));
+            Log.e("assetsFileSize",Long.toString(totalSize));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -86,7 +85,7 @@ public class AssetsUtils {
         currentPosition = 0;
         try {
             totalSize = getTotalSize(context,srcPath);
-            Log.e("assetsFileSize",Integer.toString(totalSize));
+            Log.e("assetsFileSize",Long.toString(totalSize));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -108,8 +107,10 @@ public class AssetsUtils {
         this.callback = callback;
     }
 
-    int currentPosition = 0;
-    int totalSize = 0;
+    long currentPosition = 0;
+    long totalSize = 0;
+
+    int currentProgress = 0;
 
     private void copyAssetsToDst(Context context, String srcPath, String dstPath) {
         try {
@@ -135,9 +136,13 @@ public class AssetsUtils {
                     fos.write(buffer, 0, byteCount);
                     if (progressCallback != null) {
                         long cur = 100L * currentPosition;
-                        handler.post(() -> {
-                            progressCallback.onProgress((int) (cur / totalSize));
-                        });
+                        int progress = (int) (cur / totalSize);
+                        if (progress != currentProgress) {
+                            currentProgress = progress;
+                            handler.post(() -> {
+                                progressCallback.onProgress(progress);
+                            });
+                        }
                     }
                 }
                 fos.flush();
@@ -152,9 +157,9 @@ public class AssetsUtils {
         }
     }
 
-    private int getTotalSize(Context context,String srcPath) throws IOException {
+    private long getTotalSize(Context context,String srcPath) throws IOException {
         String fileNames[] = context.getAssets().list(srcPath);
-        int size = 0;
+        long size = 0;
         if (fileNames.length > 0) {
             for (String fileName : fileNames) {
                 if (!srcPath.equals("")) { // assets 文件夹下的目录

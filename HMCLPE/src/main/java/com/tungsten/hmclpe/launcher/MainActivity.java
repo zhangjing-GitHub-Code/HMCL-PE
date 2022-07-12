@@ -1,7 +1,6 @@
 package com.tungsten.hmclpe.launcher;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -44,12 +43,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     static {
         System.loadLibrary("security");
     }
-    native void securityInit();
     public native boolean isValid(String str);
     public static native void verify();
     public static native void verifyFunc();
     public native void launch(Intent intent);
-    public native void sendMail(String to, String title, String body, MaildroidX.onCompleteCallback callback);
+    @SuppressLint("MissingSuperCall")
+    @Override
+    public native void onCreate(Bundle savedInstanceState);
 
     public LinearLayout launcherLayout;
 
@@ -76,20 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public Config exteriorConfig;
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_main);
-
-        launcherLayout = findViewById(R.id.launcher_layout);
-
-        securityInit();
-        
-        init();
-    }
-
-    private void init(){
+    public void init(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             if (getIntent().getExtras().getBoolean("fullscreen")) {
                 getWindow().getAttributes().layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES;
@@ -157,6 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         uiManager.gameManagerUI.gameManagerUIManager.versionSettingUI.onLoaded();
         uiManager.downloadUI.downloadUIManager.downloadMinecraftUI.onLoaded();
         uiManager.settingUI.settingUIManager.universalGameSettingUI.onLoaded();
+        uiManager.mainUI.customTheme();
     }
 
     public void showBarTitle(String title,boolean home,boolean close) {
@@ -217,6 +205,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void closeCurrentUI() {
         uiManager.removeUIIfExist(uiManager.exportWorldUI);
+        uiManager.removeUIIfExist(uiManager.installPackageUI);
+        uiManager.removeUIIfExist(uiManager.exportPackageTypeUI);
+        uiManager.removeUIIfExist(uiManager.exportPackageInfoUI);
+        uiManager.removeUIIfExist(uiManager.exportPackageFileUI);
         uiManager.removeUIIfExist(uiManager.installGameUI);
         uiManager.removeUIIfExist(uiManager.downloadForgeUI);
         uiManager.removeUIIfExist(uiManager.downloadFabricUI);
@@ -226,6 +218,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         uiManager.uis.get(uiManager.uis.size() - 1).onStart();
         if (uiManager.currentUI == uiManager.exportWorldUI){
             uiManager.exportWorldUI.onStop();
+        }
+        if (uiManager.currentUI == uiManager.installPackageUI){
+            uiManager.installPackageUI.onStop();
+        }
+        if (uiManager.currentUI == uiManager.exportPackageTypeUI){
+            uiManager.exportPackageTypeUI.onStop();
+        }
+        if (uiManager.currentUI == uiManager.exportPackageInfoUI){
+            uiManager.exportPackageInfoUI.onStop();
+        }
+        if (uiManager.currentUI == uiManager.exportPackageFileUI){
+            uiManager.exportPackageFileUI.onStop();
         }
         if (uiManager.currentUI == uiManager.installGameUI){
             uiManager.installGameUI.onStop();
