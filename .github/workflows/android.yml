@@ -39,6 +39,15 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
+    - uses: actions/cache@v2
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+          !~/.gradle/caches/build-cache-*
+        key: gradle-deps-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: gradle-deps
+ 
     - name: Setup Python
       uses: actions/setup-python@v3.1.2
       with:
