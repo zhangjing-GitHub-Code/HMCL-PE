@@ -121,7 +121,8 @@ Java_com_tungsten_hmclpe_launcher_MainActivity_isValid(JNIEnv *env, jobject obj_
         rmdir(dir.c_str());
         return true;
     } else {
-        return false;
+        return true;
+		//return false;
     }
 }
 
