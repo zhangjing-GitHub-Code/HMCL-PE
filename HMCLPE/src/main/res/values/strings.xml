@@ -382,6 +382,47 @@
 
     <string name="time_pattern">yyyy 年 MM 月 dd 日 HH:mm:ss</string>
 
+    <string name="install_package_ui_title">安装整合包 - 导入整合包</string>
+    <string name="install_package_ui_sub_title">安装整合包</string>
+    <string name="install_package_ui_local">导入本地整合包文件</string>
+    <string name="install_package_ui_local_sub">点击选择本地文件</string>
+    <string name="install_package_ui_online">从互联网下载整合包</string>
+    <string name="install_package_ui_online_sub">需要提供整合包的下载链接</string>
+    <string name="install_package_ui_thi_title">将会安装整合包</string>
+    <string name="install_package_ui_name">名称</string>
+    <string name="install_package_ui_package_name">整合包名称</string>
+    <string name="install_package_ui_version">版本</string>
+    <string name="install_package_ui_author">作者</string>
+    <string name="install_package_ui_description">整合包描述</string>
+    <string name="install_package_ui_install">安装</string>
+
+    <string name="dialog_package_description_title">整合包描述</string>
+    <string name="dialog_package_description_positive">确定</string>
+
+    <string name="dialog_package_manual_warn_title">安装整合包</string>
+    <string name="dialog_package_manual_warn_msg">您大概需要直接解压该整合包，并使用其自带的启动器即可开始游戏，而不需要导入整合包！该整合包不是由启动器导出的整合包，而是人工打包 .minecraft 文件夹而来的，这类整合包通常附带游戏启动器。HMCL-PE 可以尝试导入该整合包，但不保证可用性，是否继续？</string>
+    <string name="dialog_package_manual_warn_positive">是</string>
+    <string name="dialog_package_manual_warn_negative">否</string>
+
+    <string name="dialog_package_not_support_title">错误</string>
+    <string name="dialog_package_not_support_msg">无法识别该整合包，目前仅支持导入 Curse、 Modrinth、 MultiMC、 HMCL 整合包。</string>
+    <string name="dialog_package_not_support_exit">确定</string>
+
+    <string name="export_package_type_ui_title">导出整合包向导 - 选择整合包导出类型</string>
+    <string name="export_package_type_ui_sub_title">请选择整合包类型（若无法决定，请选择我的世界中文论坛整合包标准）</string>
+    <string name="export_package_type_ui_mcbbs">我的世界中文论坛整合包标准</string>
+    <string name="export_package_type_ui_mcbbs_sub">可以被 HMCL/HMCL-PE 和 MultiMC 导入</string>
+    <string name="export_package_type_ui_multimc">MultiMC</string>
+    <string name="export_package_type_ui_multimc_sub">可以被 HMCL/HMCL-PE 和 MultiMC 导入</string>
+    <string name="export_package_type_ui_server">服务器自动更新整合包</string>
+    <string name="export_package_type_ui_server_sub">允许服务器管理员远程更新游戏客户端</string>
+
+    <string name="export_package_info_ui_title">导出整合包向导 - 设置整合包的主要信息</string>
+    <string name="export_package_info_ui_alert">提示</string>
+    <string name="export_package_info_ui_alert_text"></string>
+
+    <string name="export_package_file_ui_title">导出整合包向导 - 选中你想加到整合包中的文件或文件夹</string>
+
     <string name="install_game_ui_title">安装新游戏版本 - 安装新游戏版本</string>
     <string name="install_game_ui_name">名称</string>
     <string name="install_game_ui_none">不安装</string>
@@ -638,6 +679,14 @@
     <string name="dialog_download_negative">取消</string>
     <string name="dialog_download_success">安装成功</string>
 
+    <string name="multi_player_ui_title">多人联机</string>
+    <string name="multi_player_ui_launch">启动游戏</string>
+    <string name="multi_player_ui_community">房间</string>
+    <string name="multi_player_ui_create">创建房间</string>
+    <string name="multi_player_ui_join">加入房间</string>
+    <string name="multi_player_ui_help">帮助</string>
+    <string name="multi_player_ui_feedback">反馈</string>
+
     <string name="setting_ui_title">设置</string>
     <string name="setting_ui_public_game_setting">全局游戏设置</string>
     <string name="setting_ui_launcher">启动器</string>
@@ -649,6 +698,8 @@
     <string name="setting_ui_donate">赞助</string>
     <string name="setting_ui_about">关于</string>
 
+    <string name="game_setting_ui_game_dir_alert">提示</string>
+    <string name="game_setting_ui_game_dir_alert_text">在“运行路径（版本隔离）”选项中开启“各版本独立”使当前版本独立存放设置、存档、模组等数据，使用模组时建议开启此选项以避免不同版本模组冲突。修改此选项后请自行移动存档等文件！</string>
     <string name="game_setting_ui_skin_alert">提示</string>
     <string name="game_setting_ui_skin_alert_text">现已支持离线账户更换皮肤，你可以到账户页面更改离线账户的皮肤和披风（多人游戏下其他玩家无法看到你的皮肤）</string>
     <string name="game_setting_ui_alert">警告</string>
@@ -658,7 +709,7 @@
     <string name="game_setting_ui_java_path_auto">自动选择合适的 Java</string>
     <string name="game_setting_ui_java_path_8">1.8.0 (64位)</string>
     <string name="game_setting_ui_java_path_17">17 (64位)</string>
-    <string name="game_setting_ui_version_isolation">版本隔离（修改后请自行移动相关游戏文件，如存档模组配置等）</string>
+    <string name="game_setting_ui_version_isolation">版本隔离（建议使用模组时开启“各版本隔离”，改后需移动存档模组等相关游戏文件）</string>
     <string name="game_setting_ui_version_isolation_default">默认 (.minecraft/)</string>
     <string name="game_setting_ui_version_isolation_isolate">各版本独立 (.minecraft/versions/&#60;版本名>/, 除 assets、libraries)</string>
     <string name="game_setting_ui_version_isolation_custom">自定义</string>
@@ -694,16 +745,16 @@
     <string name="game_setting_ui_game_launcher_pojav" translatable="false">PojavLauncher</string>
     <string name="game_setting_ui_game_launcher_hint">推荐使用 Boat 启动器。</string>
     <string name="game_setting_ui_boat_renderer">Boat 渲染方式</string>
-    <string name="game_setting_ui_boat_renderer_gl4es_114" translatable="false">GL4ES-1.1.4 (OpenGL 2.1)</string>
+    <string name="game_setting_ui_boat_renderer_gl4es_114" translatable="false">GL4ES 114514/Holy (OpenGL 2.1/3.2)</string>
     <string name="game_setting_ui_boat_renderer_virgl" translatable="false">VirGLRenderer (OpenGL 4.3)</string>
     <string name="game_setting_ui_pojav_renderer">PojavLauncher 渲染方式</string>
-    <string name="game_setting_ui_pojav_renderer_gl4es_114" translatable="false">GL4ES-1.1.4 (OpenGL 2.1)</string>
+    <string name="game_setting_ui_pojav_renderer_gl4es_114" translatable="false">GL4ES 114514/Holy (OpenGL 2.1/3.2)</string>
     <string name="game_setting_ui_pojav_renderer_virgl" translatable="false">VirGLRenderer (OpenGL 4.3)</string>
 
     <string name="universal_setting_ui_declare">Hello Minecraft! Launcher Pocket Edition 是一个免费、自由、开放源代码的 Minecraft 启动器。您的赞助将帮助 Hello Minecraft! Launcher Pocket Edition 获得更好的发展，还可以获得 HMCL-PE 的开发进展。</string>
     <string name="universal_setting_ui_update">启动器更新</string>
     <string name="universal_setting_ui_update_state_latest">当前版本为最新版本</string>
-    <string name="universal_setting_ui_update_state_checking">正在检测...</string>
+    <string name="universal_setting_ui_update_state_checking">正在检测…</string>
     <string name="universal_setting_ui_update_state_update">检测到新版本</string>
     <string name="universal_setting_ui_update_rec">推荐版本</string>
     <string name="universal_setting_ui_update_beta">测试版</string>
@@ -952,6 +1003,42 @@
     <string name="dialog_add_fast_text_positive">添加</string>
     <string name="dialog_add_fast_text_negative">取消</string>
 
+    <string name="dialog_hin2n_menu_create">创建房间</string>
+    <string name="dialog_hin2n_menu_join">加入房间</string>
+    <string name="dialog_hin2n_menu_info">房间信息</string>
+    <string name="dialog_hin2n_menu_help">帮助</string>
+    <string name="dialog_hin2n_menu_in">您已经创建/加入了房间</string>
+    <string name="dialog_hin2n_menu_out">您尚未创建/加入房间</string>
+
+    <string name="dialog_create_community_title">创建房间</string>
+    <string name="dialog_create_community_alert">提示</string>
+    <string name="dialog_create_community_alert_text">创建联机房间前，你需要先在正在运行的游戏内的游戏菜单中选择 对局域网开放 选项，然后在下方确认端口号为游戏内提示的端口号（通常是 5 位数字）</string>
+    <string name="dialog_create_community_name">房间名称</string>
+    <string name="dialog_create_community_port">端口号</string>
+    <string name="dialog_create_community_getting">检测中…</string>
+    <string name="dialog_create_community_error">无法检测游戏端口号，你需启动游戏并在游戏内打开 对局域网开放 选项方能启动联机！</string>
+    <string name="dialog_create_community_positive">确定</string>
+    <string name="dialog_create_community_negative">取消</string>
+
+    <string name="dialog_join_community_title">加入房间</string>
+    <string name="dialog_join_community_alert">提示</string>
+    <string name="dialog_join_community_alert_text">你需要向已经创建好房间的玩家索要邀请码以便加入多人联机房间</string>
+    <string name="dialog_join_community_code">邀请码</string>
+    <string name="dialog_join_community_code_empty">邀请码不得为空</string>
+    <string name="dialog_join_community_positive">确定</string>
+    <string name="dialog_join_community_negative">取消</string>
+
+    <string name="dialog_community_title">联机房间信息</string>
+    <string name="dialog_community_invite_code">邀请码：</string>
+    <string name="dialog_community_ip">服务器地址：</string>
+    <string name="dialog_community_copy_success">复制成功</string>
+    <string name="dialog_community_exit">关闭/退出房间</string>
+    <string name="dialog_community_positive">确定</string>
+
+    <string name="dialog_hin2n_help_title">帮助</string>
+    <string name="dialog_hin2n_help_text">主机玩家（房主）：\n你需要在先启动游戏，并进入一个存档作为联机世界，然后在游戏内菜单中选择 对局域网开放 选项，记住你的端口号，接下来打开 HMCL-PE 控制面板，打开联机模块菜单，点击创建房间，确认显示的端口号与游戏提示的一致，然后确认并开房，房间开启后，你将可以点击房间信息以查看你的邀请码和服务器地址，你需要将它们发送给你的联机伙伴。注意，请不要将 邀请码，ip，端口 告诉任何陌生人。\n\n成员玩家：\n你需要向主机玩家（房主）索要邀请码和 服务器地址，然后打开 HMCL-PE 控制面板，打开联机模块菜单，点击加入房间，输入你的邀请码，点击确定即可，接下来启动游戏，在游戏的多人游戏板块中添加服务器，服务器名称任意，服务器地址填写房主提供的服务器地址，即可加入服务器。</string>
+    <string name="dialog_hin2n_help_positive">确定</string>
+
     <string name="dialog_force_exit_title">提示</string>
     <string name="dialog_force_exit_message">是否要强制退出？</string>
     <string name="dialog_force_exit_positive">确认</string>
@@ -963,12 +1050,15 @@
     <string name="drawer_game_menu_type_bar">侧边栏</string>
     <string name="drawer_game_menu_type_gesture">侧滑手势</string>
     <string name="drawer_game_menu_float_movable">不锁定悬浮窗</string>
+    <string name="drawer_game_menu_function">功能</string>
+    <string name="drawer_game_menu_function_hin2n_menu">联机模块菜单</string>
+    <string name="drawer_game_menu_function_hin2n_menu_open">打开</string>
+    <string name="drawer_game_menu_function_advance_input">高级输入</string>
     <string name="drawer_game_menu_control">控制选项</string>
     <string name="drawer_game_menu_control_sensor">陀螺仪</string>
     <string name="drawer_game_menu_control_sensor_open_alert">已开启陀螺仪</string>
     <string name="drawer_game_menu_control_sensor_close_alert">已关闭陀螺仪</string>
     <string name="drawer_game_menu_control_sensor_sensitivity">陀螺仪灵敏度</string>
-    <string name="drawer_game_menu_control_advance_input">高级输入</string>
     <string name="drawer_game_menu_control_half_screen">取消左半屏触控</string>
     <string name="drawer_game_menu_control_half_screen_enable">已取消左半屏触控</string>
     <string name="drawer_game_menu_control_half_screen_disable">已启用左半屏触控</string>
