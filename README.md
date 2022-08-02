@@ -19,10 +19,11 @@ another autobuild fork [577fkj's](https://github.com/577fkj/HMCL-PE)
 
 not finished yet!
 
-[Discord](https://discord.gg/YUHRHAgh) [QQ](https://jq.qq.com/?_wv=1027&k=4r1lFLgc)
+[![Discord](https://img.shields.io/discord/995291757799538688.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/c79XjKHy4S)
+[![QQ](https://img.shields.io/badge/-QQ-blue)](https://jq.qq.com/?_wv=1027&k=4r1lFLgc)
 
 ## Introduction
-[Hello Minecraft! Launcher : Pocket Edition](http://tungstend.hmcl-pe.cn/)
+[Hello Minecraft! Launcher : Pocket Edition](https://tungstend.github.io/)
 
 The software attempts to restore HMCL on Android devices, allowing players to manage games, mods, controls and more.
 

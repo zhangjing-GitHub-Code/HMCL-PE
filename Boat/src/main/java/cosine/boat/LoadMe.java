@@ -3,9 +3,11 @@ package cosine.boat;
 import android.content.Context;
 import android.os.Handler;
 
+import java.io.File;
 import java.util.*;
 
 import cosine.boat.function.BoatLaunchCallback;
+import cosine.boat.utils.BoatUtils;
 
 public class LoadMe {
 
@@ -39,8 +41,9 @@ public class LoadMe {
 			setenv("JAVA_HOME" , javaPath);
 			setenv("LIBGL_MIPMAP","3");
 			setenv("LIBGL_NORMALIZE","1");
-            setenv("LIBGL_ES","2");
             setenv("LIBGL_VSYNC","1");
+            setenv("LIBGL_NOINTOVLHACK", "1");
+
 
 			if (renderer.equals("VirGL")) {
                 setenv("LIBGL_NAME","libGL.so.1");
@@ -53,17 +56,11 @@ public class LoadMe {
                 setenv("MESA_GLSL_CACHE_DIR",context.getCacheDir().getAbsolutePath());
             }
 			else {
-                if (isJava17) {
-                    setenv("LIBGL_NAME","libgl4es_114.so");
-                    setenv("LIBGL_GL","32");
-                    setenv("LIBGL_NOINTOVLHACK", "1");
-                }
-                else {
-                    setenv("LIBGL_NAME","libgl4es_114514.so");
-                    setenv("LIBGL_GL","21");
-                }
+                setenv("LIBGL_NAME","libgl4es_114.so");
                 setenv("LIBEGL_NAME","libEGL_wrapper.so");
-
+                if (highVersion) {
+                    setenv("LIBGL_GL", "32");
+                }
             }
 
             // openjdk
@@ -102,14 +99,8 @@ public class LoadMe {
             dlopen(BOAT_LIB_DIR + "/libopenal.so.1");
 
             if (!renderer.equals("VirGL")) {
-                if (isJava17) {
-                    dlopen(BOAT_LIB_DIR + "/renderer/gl4es/libgl4es_114.so");
-                    dlopen(BOAT_LIB_DIR + "/renderer/gl4es/libEGL_wrapper.so");
-                }
-                else {
-                    dlopen(BOAT_LIB_DIR + "/renderer/gl4es114514/libgl4es_114514.so");
-                    dlopen(BOAT_LIB_DIR + "/renderer/gl4es114514/libEGL_wrapper.so");
-                }
+                dlopen(BOAT_LIB_DIR + "/renderer/gl4es/libgl4es_114.so");
+                dlopen(BOAT_LIB_DIR + "/renderer/gl4es/libEGL_wrapper.so");
             }
             else {
                 dlopen(BOAT_LIB_DIR + "/renderer/virgl/libexpat.so.1");
@@ -136,12 +127,15 @@ public class LoadMe {
             chdir(gameDir);
 
 			String finalArgs[] = new String[args.size()];
+            StringBuilder sb=new StringBuilder();
 			for (int i = 0; i < args.size(); i++) {
                 if (!args.get(i).equals(" ")) {
                     finalArgs[i] = args.get(i);
                     System.out.println("Minecraft Args:" + finalArgs[i]);
+                    sb.append(finalArgs[i]+"\n");
                 }
 			}
+            BoatUtils.writeFile(new File(home+"/params.txt"),sb.toString());
             int exitCode = dlexec(finalArgs);
             System.out.println("OpenJDK exited with code : " + exitCode);
         }

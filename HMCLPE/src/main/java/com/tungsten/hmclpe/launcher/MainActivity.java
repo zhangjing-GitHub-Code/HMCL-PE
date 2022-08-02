@@ -8,11 +8,13 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
@@ -34,6 +36,7 @@ import com.tungsten.hmclpe.launcher.uis.game.download.DownloadUrlSource;
 import com.tungsten.hmclpe.launcher.uis.tools.UIManager;
 import com.tungsten.hmclpe.launcher.uis.universal.setting.right.launcher.ExteriorSettingUI;
 import com.tungsten.hmclpe.update.UpdateChecker;
+import com.tungsten.hmclpe.utils.LocaleUtils;
 import com.tungsten.hmclpe.utils.animation.CustomAnimationUtils;
 
 import co.nedim.maildroidx.MaildroidX;
@@ -311,6 +314,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleUtils.setLanguage(base));
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        LocaleUtils.setLanguage(this);
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
         if (isLoaded){
@@ -364,9 +378,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
-    public void startVerify(VerifyInterface verifyInterface){
+    public void startVerify(VerifyInterface verifyInterface) {
         SharedPreferences msh = getSharedPreferences("Security", Context.MODE_PRIVATE);
         SharedPreferences.Editor mshe = msh.edit();
+        Log.e("verified", Boolean.toString(msh.getBoolean("verified",false)));
+        Log.e("valid", Boolean.toString(isValid(msh.getString("code",null))));
         if (msh.getBoolean("verified",false) && isValid(msh.getString("code",null))) {
             verifyInterface.onSuccess();
             return;
